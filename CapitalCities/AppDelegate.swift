@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  CustomMapAnnotation
 //
-//  Created by Richard Lowe on 26/06/2017.
-//  Copyright © 2017 Richard Lowe All rights reserved.
+//  Created by Richard Lowe on 02/03/2018.
+//  Copyright © 2018 Richard Lowe All rights reserved.
 //
 
 import UIKit

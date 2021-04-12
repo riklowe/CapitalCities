@@ -10,7 +10,10 @@
 		705C025F204B822000E2D128 /* PinAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705C025E204B822000E2D128 /* PinAnnotationView.swift */; };
 		707B360120497D580057C934 /* helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707B360020497D580057C934 /* helper.swift */; };
 		707B3603204982460057C934 /* MarkerAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 707B3602204982460057C934 /* MarkerAnnotationView.swift */; };
+		70951C6D2236B349006135F2 /* myPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70951C6C2236B349006135F2 /* myPointAnnotation.swift */; };
+		70C5B2A32232638700499DD8 /* CustomPointAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C5B2A22232638600499DD8 /* CustomPointAnnotation.swift */; };
 		70CFB6F41F0173D3009D451B /* AnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70CFB6F31F0173D3009D451B /* AnnotationView.swift */; };
+		70E5D03B204C9C3E008BE0EE /* geoCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E5D03A204C9C3E008BE0EE /* geoCode.swift */; };
 		A3FFF1741D382013008CDE73 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FFF1731D382013008CDE73 /* AppDelegate.swift */; };
 		A3FFF1761D382013008CDE73 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FFF1751D382013008CDE73 /* ViewController.swift */; };
 		A3FFF1791D382013008CDE73 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A3FFF1771D382013008CDE73 /* Main.storyboard */; };
@@ -22,14 +25,17 @@
 		705C025E204B822000E2D128 /* PinAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinAnnotationView.swift; sourceTree = "<group>"; };
 		707B360020497D580057C934 /* helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = helper.swift; sourceTree = "<group>"; };
 		707B3602204982460057C934 /* MarkerAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerAnnotationView.swift; sourceTree = "<group>"; };
+		70951C6C2236B349006135F2 /* myPointAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myPointAnnotation.swift; sourceTree = "<group>"; };
+		70C5B2A22232638600499DD8 /* CustomPointAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPointAnnotation.swift; sourceTree = "<group>"; };
 		70CFB6F31F0173D3009D451B /* AnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotationView.swift; sourceTree = "<group>"; };
-		A3FFF1701D382013008CDE73 /* CustomMapAnnotation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomMapAnnotation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		70E5D03A204C9C3E008BE0EE /* geoCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = geoCode.swift; sourceTree = "<group>"; };
+		A3FFF1701D382013008CDE73 /* CapitalCities.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CapitalCities.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3FFF1731D382013008CDE73 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A3FFF1751D382013008CDE73 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A3FFF1781D382013008CDE73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A3FFF17A1D382013008CDE73 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A3FFF17D1D382013008CDE73 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		A3FFF17F1D382013008CDE73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3FFF17F1D382013008CDE73 /* info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,7 +52,7 @@
 		A3FFF1671D382013008CDE73 = {
 			isa = PBXGroup;
 			children = (
-				A3FFF1721D382013008CDE73 /* CustomMapAnnotation */,
+				A3FFF1721D382013008CDE73 /* CapitalCities */,
 				A3FFF1711D382013008CDE73 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,12 +60,12 @@
 		A3FFF1711D382013008CDE73 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A3FFF1701D382013008CDE73 /* CustomMapAnnotation.app */,
+				A3FFF1701D382013008CDE73 /* CapitalCities.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A3FFF1721D382013008CDE73 /* CustomMapAnnotation */ = {
+		A3FFF1721D382013008CDE73 /* CapitalCities */ = {
 			isa = PBXGroup;
 			children = (
 				A3FFF1731D382013008CDE73 /* AppDelegate.swift */,
@@ -67,21 +73,24 @@
 				707B3602204982460057C934 /* MarkerAnnotationView.swift */,
 				705C025E204B822000E2D128 /* PinAnnotationView.swift */,
 				A3FFF1751D382013008CDE73 /* ViewController.swift */,
+				70951C6C2236B349006135F2 /* myPointAnnotation.swift */,
+				70C5B2A22232638600499DD8 /* CustomPointAnnotation.swift */,
+				70E5D03A204C9C3E008BE0EE /* geoCode.swift */,
 				707B360020497D580057C934 /* helper.swift */,
 				A3FFF1771D382013008CDE73 /* Main.storyboard */,
 				A3FFF17A1D382013008CDE73 /* Assets.xcassets */,
 				A3FFF17C1D382013008CDE73 /* LaunchScreen.storyboard */,
-				A3FFF17F1D382013008CDE73 /* Info.plist */,
+				A3FFF17F1D382013008CDE73 /* info.plist */,
 			);
-			path = CustomMapAnnotation;
+			path = CapitalCities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A3FFF16F1D382013008CDE73 /* CustomMapAnnotation */ = {
+		A3FFF16F1D382013008CDE73 /* CapitalCities */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A3FFF1821D382013008CDE73 /* Build configuration list for PBXNativeTarget "CustomMapAnnotation" */;
+			buildConfigurationList = A3FFF1821D382013008CDE73 /* Build configuration list for PBXNativeTarget "CapitalCities" */;
 			buildPhases = (
 				A3FFF16C1D382013008CDE73 /* Sources */,
 				A3FFF16D1D382013008CDE73 /* Frameworks */,
@@ -91,9 +100,9 @@
 			);
 			dependencies = (
 			);
-			name = CustomMapAnnotation;
+			name = CapitalCities;
 			productName = CustomMapAnnotation;
-			productReference = A3FFF1701D382013008CDE73 /* CustomMapAnnotation.app */;
+			productReference = A3FFF1701D382013008CDE73 /* CapitalCities.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -113,11 +122,12 @@
 					};
 				};
 			};
-			buildConfigurationList = A3FFF16B1D382013008CDE73 /* Build configuration list for PBXProject "CustomMapAnnotation" */;
+			buildConfigurationList = A3FFF16B1D382013008CDE73 /* Build configuration list for PBXProject "CapitalCities" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -126,7 +136,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A3FFF16F1D382013008CDE73 /* CustomMapAnnotation */,
+				A3FFF16F1D382013008CDE73 /* CapitalCities */,
 			);
 		};
 /* End PBXProject section */
@@ -151,9 +161,12 @@
 			files = (
 				A3FFF1761D382013008CDE73 /* ViewController.swift in Sources */,
 				707B3603204982460057C934 /* MarkerAnnotationView.swift in Sources */,
+				70951C6D2236B349006135F2 /* myPointAnnotation.swift in Sources */,
 				70CFB6F41F0173D3009D451B /* AnnotationView.swift in Sources */,
 				705C025F204B822000E2D128 /* PinAnnotationView.swift in Sources */,
+				70E5D03B204C9C3E008BE0EE /* geoCode.swift in Sources */,
 				A3FFF1741D382013008CDE73 /* AppDelegate.swift in Sources */,
+				70C5B2A32232638700499DD8 /* CustomPointAnnotation.swift in Sources */,
 				707B360120497D580057C934 /* helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,10 +302,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Y56SSGALT7;
-				INFOPLIST_FILE = CustomMapAnnotation/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CapitalCities/info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lowedown.CustomMapAnnotation;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lowedown.CapitalCities;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
@@ -304,10 +317,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = Y56SSGALT7;
-				INFOPLIST_FILE = CustomMapAnnotation/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/CapitalCities/info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lowedown.CustomMapAnnotation;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lowedown.CapitalCities;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
 				SWIFT_VERSION = 4.0;
@@ -317,7 +330,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A3FFF16B1D382013008CDE73 /* Build configuration list for PBXProject "CustomMapAnnotation" */ = {
+		A3FFF16B1D382013008CDE73 /* Build configuration list for PBXProject "CapitalCities" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A3FFF1801D382013008CDE73 /* Debug */,
@@ -326,7 +339,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A3FFF1821D382013008CDE73 /* Build configuration list for PBXNativeTarget "CustomMapAnnotation" */ = {
+		A3FFF1821D382013008CDE73 /* Build configuration list for PBXNativeTarget "CapitalCities" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A3FFF1831D382013008CDE73 /* Debug */,

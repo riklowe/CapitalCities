@@ -58,3 +58,12 @@ func RandomFixedColor() -> UIColor {
     return retVal
     
 }
+
+extension String {
+    func size(OfFont font: UIFont) -> CGSize {
+        let fontAttribute = [NSAttributedStringKey.font: font]
+        return (self as NSString).size(withAttributes: fontAttribute)
+    }
+}
+
+
