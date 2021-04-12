@@ -3,7 +3,7 @@
 //  CapitalCities
 //
 //  Created by Richard Lowe on 11/03/2019.
-//  Copyright © 2019 Luke Van In. All rights reserved.
+//  Copyright © 2019 Richard Lowe All rights reserved.
 //
 
 import Foundation

@@ -3,7 +3,7 @@
 //  CustomMapAnnotation
 //
 //  Created by Richard Lowe on 02/03/2018.
-//  Copyright © 2018 Richard Lowe All rights reserved.
+//  Copyright © 2019 Richard Lowe All rights reserved.
 //
 
 import Foundation
