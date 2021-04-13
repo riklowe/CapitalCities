@@ -33,22 +33,22 @@ class ViewController: UIViewController {
         switch mapTypeCounter {
         case 0:
             mapView.mapType = MKMapType.standard
-            mapLabel = "standard"
+            mapLabel = "Standard"
         case 1:
             mapView.mapType = MKMapType.mutedStandard
-            mapLabel = "mutedStandard"
+            mapLabel = "Muted Standard"
         case 2:
             mapView.mapType = MKMapType.hybrid
-            mapLabel = "hybrid"
+            mapLabel = "Hybrid Map"
         case 3:
             mapView.mapType = MKMapType.hybridFlyover
-            mapLabel = "hybridFlyover"
+            mapLabel = "Hybrid Flyover"
         case 4:
             mapView.mapType = MKMapType.satellite
-            mapLabel = "satellite"
+            mapLabel = "Satellite"
         case 5:
             mapView.mapType = MKMapType.satelliteFlyover
-            mapLabel = "satelliteFlyover"
+            mapLabel = "Satellite Flyover"
         default:
             break
         }
@@ -79,7 +79,7 @@ class ViewController: UIViewController {
     var locationManager: CLLocationManager?
     var currentLocation: MKUserLocation?
     var mapTypeCounter = 0
-    var allLabels = true
+    var allLabels = false
     
     lazy var formatter: DateFormatter = {
         print ("***** \(#function) *****")
@@ -354,7 +354,7 @@ extension ViewController : MKMapViewDelegate {
         snapshotView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:[snapshotView(300)]", options: [], metrics: nil, views: views))
         snapshotView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[snapshotView(200)]", options: [], metrics: nil, views: views))
         
-        let options = MKMapSnapshotOptions()
+        let options = MKMapSnapshotter.Options()
         options.size = CGSize(width: width, height: height)
         options.mapType = .satelliteFlyover
         options.camera = MKMapCamera(lookingAtCenter: annotationView.annotation!.coordinate, fromDistance: 1000, pitch: 0, heading: 0)
@@ -377,7 +377,7 @@ extension ViewController : MKMapViewDelegate {
         
         print ("***** \(#function) *****S")
         
-        print (annotationView.annotation?.coordinate)
+        print (annotationView.annotation?.coordinate as Any)
         
         guard let coords = annotationView.annotation?.coordinate else { return }
         
@@ -390,7 +390,7 @@ extension ViewController : MKMapViewDelegate {
         snapshotView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:[snapshotView(300)]", options: [], metrics: nil, views: views))
         snapshotView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[snapshotView(200)]", options: [], metrics: nil, views: views))
         
-        let options = MKMapSnapshotOptions()
+        let options = MKMapSnapshotter.Options()
         options.size = CGSize(width: width, height: height)
         options.mapType = .satelliteFlyover
         options.camera = MKMapCamera(lookingAtCenter: coords, fromDistance: 10000, pitch: 0, heading: 0)
@@ -427,7 +427,7 @@ extension ViewController : MKMapViewDelegate {
         print ("+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
         //this sends an objc_send message that returns the view hierachy
         let recursiveViews = view.perform(Selector(("recursiveDescription")))
-        print (recursiveViews)
+        print (recursiveViews as Any)
 
         if recursiveViews.debugDescription.contains("_MKUILabel") {
             print ("--------Got it")
@@ -491,7 +491,7 @@ extension ViewController : MKMapViewDelegate {
         print (url_to_use)
         
         if #available(iOS 10.0, *) {
-            UIApplication.shared.open(url_to_use, options: [:]) {_ in }
+            UIApplication.shared.open(url_to_use, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary([:])) {_ in }
         } else {
             // Fallback on earlier versions
             UIApplication.shared.openURL(url_to_use)
@@ -534,14 +534,14 @@ extension UIView {
 extension String {
     func height(withConstrainedWidth width: CGFloat, font: UIFont) -> CGFloat {
         let constraintRect = CGSize(width: width, height: .greatestFiniteMagnitude)
-        let boundingBox = self.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font: font], context: nil)
+        let boundingBox = self.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: font], context: nil)
         
         return ceil(boundingBox.height)
     }
     
     func width(withConstrainedHeight height: CGFloat, font: UIFont) -> CGFloat {
         let constraintRect = CGSize(width: .greatestFiniteMagnitude, height: height)
-        let boundingBox = self.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [NSAttributedStringKey.font: font], context: nil)
+        let boundingBox = self.boundingRect(with: constraintRect, options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: font], context: nil)
         
         return ceil(boundingBox.width)
     }
@@ -552,4 +552,9 @@ extension UILabel{
         get { return self.font }
         set { self.font = newValue }
     }
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToUIApplicationOpenExternalURLOptionsKeyDictionary(_ input: [String: Any]) -> [UIApplication.OpenExternalURLOptionsKey: Any] {
+	return Dictionary(uniqueKeysWithValues: input.map { key, value in (UIApplication.OpenExternalURLOptionsKey(rawValue: key), value)})
 }

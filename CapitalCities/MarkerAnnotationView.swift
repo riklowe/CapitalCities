@@ -30,7 +30,7 @@ class MarkerAnnotationView : MKMarkerAnnotationView {
 
             //use an image in the callout
             let mapsButton = UIButton(frame: CGRect(origin: CGPoint.zero, size: CGSize(width: 30, height: 30)))
-            mapsButton.setBackgroundImage(UIImage(named: "smile"), for: UIControlState())
+            mapsButton.setBackgroundImage(UIImage(named: "smile"), for: UIControl.State())
 
             rightCalloutAccessoryView = mapsButton
 
