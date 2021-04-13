@@ -488,7 +488,7 @@ extension ViewController : MKMapViewDelegate {
         
         //configureDetailView(annotationView: annotationView)
 
-        print (url_to_use)
+        print (url_to_use as Any)
         
         if #available(iOS 10.0, *) {
             UIApplication.shared.open(url_to_use, options: convertToUIApplicationOpenExternalURLOptionsKeyDictionary([:])) {_ in }
